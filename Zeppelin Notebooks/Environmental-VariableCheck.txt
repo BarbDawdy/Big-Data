@@ -1,0 +1,28 @@
+# put the following sh script into zepplin notebook to test out the environmental variables on your system
+# run the script 
+#
+# your output should look something like the following:
+#
+# res0: String = yarn-client
+# res1: String = hdfs:///apps/zeppelin/zeppelin-spark-0.5.5-SNAPSHOT.jar
+# res2: String = /etc/hadoop/conf
+# res3: String = /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91.x86_64
+# res4: String = /usr/hdp/2.3.2.0-2950/spark
+# res5: String = null
+# res6: String = /usr/hdp/current/spark-client//python/lib/py4j-0.8.2.1-src.zip:/usr/hdp/current/spark-client//python/:/usr/hdp/current/spark-client//python
+# res7: String = -Dhdp.version=2.3.2.0-2950 -Dspark.executor.memory=512m -Dspark.yarn.queue=default
+#
+# if you are having issues with your zepplin notebook you will need to update the environmental variables in the
+# zeppelin-env-bak.sh file in your linux vm or linux server or if using Ambari in the config settings for zeppelin
+#
+ 
+System.getenv().get("ZEPPELIN_JAVA_OPTS")
+System.getenv().get("MASTER")
+System.getenv().get("SPARK_YARN_JAR")
+System.getenv().get("HADOOP_CONF_DIR")
+System.getenv().get("JAVA_HOME")
+System.getenv().get("SPARK_HOME")
+System.getenv().get("PYSPARK_PYTHON")
+System.getenv().get("PYTHONPATH")
+System.getenv().get("ZEPPELIN_JAVA_OPTS")
+
